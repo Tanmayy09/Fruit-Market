@@ -1,0 +1,87 @@
+
+.search-box
+{
+	-fx-background-color:#fff;
+	-fx-background-radius :100;
+}
+
+.transparent
+{
+	-fx-background-color : transparent;
+}
+
+.search-button
+{
+	-fx-background-color :#828282;
+	-fx-background-radius: 30; 
+}
+
+
+.signout-button
+{
+	-fx-background-color :#828282;
+	-fx-background-radius: 30; 
+}
+
+
+.signout-button:hover
+{
+	-fx-background-color: red;
+}
+
+.right-bar
+{
+	-fx-background-color : #D3D3D3;
+}
+
+
+.card-color
+{
+	-fx-background-color : #F16C31;
+	-fx-background-radius:20;
+}
+
+.combo-box
+{
+	-fx-background-color : rgba(255,255,255,0.3);
+	-fx-background-radius:20;
+}
+
+.free-delivery
+{
+	-fx-background-color : #D3D3D3;
+	-fx-background-radius :20;
+}
+
+
+.card-delivery
+{
+	-fx-background-color : #BAEAC3;
+	-fx-background-radius :20;
+}
+
+.fruit-select
+{
+	-fx-background-color : #D3D3D3;
+	-fx-background-radius :40;
+}
+
+.fruit-select:hover
+{
+	-fx-background-color : #BAEAC3;
+}
+
+.btn
+{
+	-fx-background-color : transparent;
+}
+
+.fruit-item
+{
+	-fx-background-color : #ffff;
+	-fx-background-radius :30;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}

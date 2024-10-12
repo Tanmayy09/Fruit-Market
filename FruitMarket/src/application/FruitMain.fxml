@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FruitMainController">
+   <children>
+      <BorderPane layoutY="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="600.0" prefWidth="278.0" styleClass="right-bar" stylesheets="@fruitMain.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="79.0" prefWidth="278.0">
+                     <children>
+                        <Label text="Fruits">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="Market">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="238.0" styleClass="search-box" stylesheets="@fruitMain.css">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="search_box" promptText="Type here to search" styleClass="transparent" stylesheets="@fruitMain.css" />
+                        <Button fx:id="search_btn" mnemonicParsing="false" prefHeight="20.0" prefWidth="75.0" styleClass="search-button" stylesheets="@fruitMain.css" text="Search" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                     <effect>
+                        <DropShadow height="17.59" offsetY="2.0" radius="6.095" spread="0.06" width="8.79" />
+                     </effect>
+                  </HBox>
+                  <VBox fx:id="choosen_product" alignment="CENTER" prefHeight="385.0" prefWidth="278.0" styleClass="card-color" stylesheets="@fruitMain.css">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="250.0">
+                           <children>
+                              <Label fx:id="fruit_name" prefHeight="40.0" prefWidth="136.0" text="Peach" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fruit_price" alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="131.0" text="80 Rs" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="fruit_image" fitHeight="180.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="15.0" right="10.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@../img/peach.png" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="238.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="126.0" text="KG" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="28.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="25.0" prefWidth="111.0" promptText="1" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="238.0">
+                           <children>
+                              <Separator prefHeight="17.0" prefWidth="112.0" />
+                              <Label text="or" textFill="WHITE" />
+                              <Separator prefHeight="17.0" prefWidth="114.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="250.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="126.0" text="KG" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="28.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="25.0" prefWidth="111.0" promptText="select" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="Add_cart" mnemonicParsing="false" prefHeight="28.0" prefWidth="190.0" styleClass="search-button" stylesheets="@fruitMain.css" text="Add to cart" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <Button fx:id="signout_btn" mnemonicParsing="false" onAction="#signout" styleClass="signout-button" stylesheets="@fruitMain.css" text="Sign out" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SIGN_OUT" size="1.3em" />
+                     </graphic>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="572.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="89.0" text="Language :" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="69.0" text="English" textFill="#878787" underline="true">
+                           <font>
+                              <Font name="Cambria" size="16.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="47.0" prefWidth="283.0" />
+                        <Label prefHeight="26.0" prefWidth="94.0" text="My Account" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="16.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIcon fill="#878787" glyphName="SHOPPING_CART" size="3.5em" />
+                        <Pane layoutX="154.0" layoutY="10.0" prefHeight="47.0" prefWidth="35.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="59.0" prefWidth="572.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="266.0" styleClass="free-delivery" stylesheets="@fruitMain.css">
+                           <children>
+                              <VBox prefHeight="59.0" prefWidth="148.0">
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="96.0" text="Free delivery" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="26.0" prefWidth="96.0" text="over 200Rs" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <FontAwesomeIcon fill="#878787" glyphName="TRUCK" size="4em" wrappingWidth="68.28571510314941" />
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="59.0" prefWidth="113.0" />
+                        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="266.0" styleClass="card-delivery" stylesheets="@fruitMain.css">
+                           <children>
+                              <VBox prefHeight="59.0" prefWidth="148.0">
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="96.0" text="Shop online" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="26.0" prefWidth="112.0" text="at 5% discount" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <FontAwesomeIcon fill="#878787" glyphName="CREDIT_CARD" size="4em" wrappingWidth="68.28571510314941" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="32.0" prefWidth="532.0" stylesheets="@loginController.css">
+                     <children>
+                        <HBox alignment="CENTER" onMousePressed="#ClickFruit" prefHeight="28.0" prefWidth="54.0" styleClass="fruit-select" stylesheets="@fruitMain.css">
+                           <children>
+                              <Label text="Fruits" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <Pane prefHeight="32.0" prefWidth="24.0" />
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMousePressed="#ClickVeg" prefHeight="31.0" prefWidth="65.0" styleClass="fruit-select" stylesheets="@fruitMain.css">
+                           <children>
+                              <Label text="Vegetables" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <Pane prefHeight="32.0" prefWidth="24.0" />
+                        <HBox alignment="CENTER" onMouseClicked="#showBeveragedata" prefHeight="29.0" prefWidth="61.0" styleClass="fruit-select" stylesheets="@fruitMain.css">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="55.0" text="Beverages" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <Pane prefHeight="32.0" prefWidth="24.0" />
+                        <HBox alignment="CENTER" prefHeight="29.0" prefWidth="49.0" styleClass="fruit-select" stylesheets="@fruitMain.css">
+                           <children>
+                              <Label text="Spices" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <Pane prefHeight="32.0" prefWidth="24.0" />
+                        <HBox alignment="CENTER" onMouseClicked="#ClickDairy" prefHeight="30.0" prefWidth="50.0" styleClass="fruit-select" stylesheets="@fruitMain.css">
+                           <children>
+                              <Label text="Dairy" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <Pane prefHeight="32.0" prefWidth="24.0" />
+                        <HBox alignment="CENTER" onMousePressed="#ClickSnack" prefHeight="29.0" prefWidth="49.0" styleClass="fruit-select" stylesheets="@fruitMain.css">
+                           <children>
+                              <Label text="Snacks" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                        <Pane prefHeight="32.0" prefWidth="24.0" />
+                        <HBox alignment="CENTER" onMousePressed="#ClickBody" prefHeight="36.0" prefWidth="65.0" styleClass="fruit-select" stylesheets="@fruitMain.css">
+                           <children>
+                              <Label text="Body &amp; skin" />
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ScrollPane fx:id="scroll_fruit" prefHeight="432.0" prefWidth="572.0" styleClass="transparent" stylesheets="@fruitMain.css">
+                     <content>
+                        <GridPane fx:id="grid_fruit" prefHeight="10.0" prefWidth="85.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
